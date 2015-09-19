@@ -9,7 +9,7 @@
 这样, Web 开发人员可以使用 Lua 脚本语言调动 Nginx 支持的各种 C 以及 Lua 模块,
 快速构造出足以胜任 10K+ 并发连接响应的超高性能 Web 应用系统.*
 
-[openresty官网](http://openresty.org/ "http://openresty.org/") [中文](http://openresty.org/cn/ "http://openresty.org/cn/")
+[openresty官网](http://openresty.org/ "http://openresty.org/") | [中文](http://openresty.org/cn/ "http://openresty.org/cn/")
 
 
 
@@ -25,18 +25,18 @@ openresty构建在nginx的ngx_lua模块之上，更多nginx api for lua请查看
 目录结构说明
 ============
 
-1. config 存放nginx配置(路径映射，端口等)，lua包地址，
-	* globe_config.lua 设置mysql、redis、ssdb等相关配置信息，可以在lua代码中访问
-	* app.conf 设置监听端口，映射路径等信息
-	* mime.types mime类型列表
-	* myapp.sh 启动脚本
-	* nginx.conf nginx的配置文件
+1. config 存放nginx配置(路径映射，端口等)，lua包地址<br>
+* globe_config.lua 设置mysql、redis、ssdb等相关配置信息，可以在lua代码中访问
+* app.conf 设置监听端口，映射路径等信息
+* mime.types mime类型列表
+* myapp.sh 启动脚本
+* nginx.conf nginx的配置文件
 
 2. handler 存放lua脚本，对应具体的业务接口，同时路径对应访问地址
 
 3. module 各种lua模块
-	* resty 存放openresty提供的各种模块以及各种第三方模块
-	* service 存放根据项目需要自己实现的模块
+* resty 存放openresty提供的各种模块以及各种第三方模块
+* service 存放根据项目需要自己实现的模块
 
 4. test 测试脚本存放目录
 
@@ -44,19 +44,19 @@ openresty构建在nginx的ngx_lua模块之上，更多nginx api for lua请查看
 关于部署
 ========
 
-1. 安装openresty
-		请查看openresty官网的安装说明
+1. 安装openresty<br>
+  请查看openresty官网的安装说明
 2. 下载完整的app1工程，放置到/opt目录下（可以根据自己的需要更改目录，记得更改config/nginx.conf、config/app.conf两个配置文件）
 3. 启动
-		```shell
-		nginx -c "/opt/app1/config/nginx.conf"
-		```
-		或者
-		```shell
-		/opt/app1/config/myapp.sh start
-		```
+  ```
+  nginx -c "/opt/app1/config/nginx.conf"
+  ```
+  或者
+  ```
+  /opt/app1/config/myapp.sh start
+  ```
 4. 测试
-		访问http://localhost:18888/app1/test_json
+  访问http://localhost:18888/app1/test_json
 
 
 
