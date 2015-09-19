@@ -26,17 +26,17 @@ openresty构建在nginx的ngx_lua模块之上，更多nginx api for lua请查看
 ============
 
 1. config 存放nginx配置(路径映射，端口等)，lua包地址<br>
-* globe_config.lua 设置mysql、redis、ssdb等相关配置信息，可以在lua代码中访问
-* app.conf 设置监听端口，映射路径等信息
-* mime.types mime类型列表
-* myapp.sh 启动脚本
-* nginx.conf nginx的配置文件
+  * globe_config.lua 设置mysql、redis、ssdb等相关配置信息，可以在lua代码中访问
+  * app.conf 设置监听端口，映射路径等信息
+  * mime.types mime类型列表
+  * myapp.sh 启动脚本
+  * nginx.conf nginx的配置文件
 
 2. handler 存放lua脚本，对应具体的业务接口，同时路径对应访问地址
 
 3. module 各种lua模块
-* resty 存放openresty提供的各种模块以及各种第三方模块
-* service 存放根据项目需要自己实现的模块
+  * resty 存放openresty提供的各种模块以及各种第三方模块
+  * service 存放根据项目需要自己实现的模块
 
 4. test 测试脚本存放目录
 
